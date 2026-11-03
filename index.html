@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DinDin do Lar — Edição Portugal | Folha de cálculo para organizar as suas finanças</title>
+<meta name="description" content="A folha de cálculo DinDin do Lar — Edição Portugal: controle receitas, despesas, cartões e dívidas. Adaptada a Portugal, em euros. Apenas €12,90, pagamento único.">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1047172495034924');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1047172495034924&ev=PageView&noscript=1" alt=""></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+:root{--bg:#0a0f1e;--bg2:#0d1428;--surface:#121a33;--line:rgba(255,255,255,.09);--ink:#f2f5ff;--ink-soft:#a7b1d4;--ink-faint:#6b7699;--green:#22c55e;--green-deep:#16a34a;--green-glow:rgba(34,197,94,.22);--gold:#e8b64c;--radius:18px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green);background:var(--green-glow);border:1px solid rgba(34,197,94,.35);padding:8px 16px;border-radius:999px;margin-bottom:18px}
+.hero{padding:72px 0 48px;text-align:center;background:radial-gradient(700px 380px at 50% -80px,rgba(34,197,94,.14),transparent 70%),var(--bg)}
+.hero h1{font-size:clamp(30px,6vw,44px);font-weight:800;margin-bottom:18px}
+.hero h1 .hl{color:var(--green)}
+.hero p.lead{font-size:18px;color:var(--ink-soft);margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;text-decoration:none;border-radius:14px;cursor:pointer;border:0;transition:transform .15s}
+.btn-primary{background:linear-gradient(135deg,var(--green),var(--green-deep));color:#04120a;padding:18px 40px;font-size:18px;width:100%;max-width:420px;box-shadow:0 14px 30px -10px var(--green-glow)}
+.btn-primary:hover{transform:translateY(-2px)}
+.price-line{margin-top:16px;font-size:15px;color:var(--ink-faint)}
+.price-line b{color:var(--gold);font-size:20px}
+.sec-head{text-align:center;margin-bottom:36px}
+.sec-head h2{font-size:clamp(24px,5vw,34px);margin-bottom:12px}
+.sec-head p{color:var(--ink-soft)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px}
+.card .ico{font-size:30px;margin-bottom:12px;display:block}
+.card h3{font-size:17px;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:14px}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;margin-bottom:12px;display:flex;gap:16px;align-items:flex-start}
+.feat .ico{font-size:26px;flex-shrink:0}
+.feat h3{font-size:16px;margin-bottom:6px}
+.feat p{color:var(--ink-soft);font-size:14px}
+.steps{counter-reset:step;display:grid;gap:14px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px 24px 84px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;left:22px;top:24px;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green-deep));color:#04120a;font-weight:800;display:grid;place-items:center;font-size:20px}
+.step h3{margin-bottom:8px;font-size:17px}
+.step p{color:var(--ink-soft);font-size:14px}
+.offer{background:linear-gradient(180deg,#10233a,var(--surface));border:2px solid var(--green);border-radius:22px;padding:40px 28px;text-align:center;box-shadow:0 24px 60px -18px var(--green-glow)}
+.offer .old{color:var(--ink-faint);text-decoration:line-through;font-size:18px}
+.offer .price{font-size:56px;font-weight:800;margin:8px 0}
+.offer .price small{font-size:18px;color:var(--ink-soft);font-weight:600}
+.offer ul{list-style:none;text-align:left;max-width:420px;margin:24px auto 28px}
+.offer li{padding:8px 0;color:var(--ink-soft);font-size:15px;display:flex;gap:10px}
+.offer li::before{content:"✓";color:var(--green);font-weight:800;flex-shrink:0}
+.guarantee{margin-top:20px;font-size:14px;color:var(--ink-faint)}
+.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;color:var(--ink);font-weight:700;font-size:15px;text-align:left;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--ink-soft);font-size:14px}
+.faq-a div{padding:0 20px 20px}
+.final{text-align:center;background:radial-gradient(700px 380px at 50% 0,rgba(34,197,94,.16),transparent 70%),var(--bg2);border-top:1px solid var(--line)}
+.final h2{font-size:clamp(24px,5vw,36px);margin-bottom:14px}
+.final p{color:var(--ink-soft);margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--ink-faint);font-size:13px;text-align:center}
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:50;background:rgba(10,15,30,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:12px 20px;display:none}
+.sticky.visible{display:block}
+.sticky .btn{padding:14px 20px;font-size:16px}
+@media(max-width:560px){.cards{grid-template-columns:1fr}section{padding:44px 0}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">📊 Folha de cálculo · Edição Portugal</span>
+    <h1>O seu dinheiro some antes do fim do mês <span class="hl">e nem sabe para onde foi?</span></h1>
+    <p class="lead">A folha de cálculo <b>DinDin do Lar — Edição Portugal</b> organiza as suas receitas, despesas, cartões e dívidas num só sítio. Adaptada a Portugal, em euros, pronta a usar.</p>
+    <a href="https://pay.hotmart.com/T108151603R" class="btn btn-primary" data-cta>Quero organizar as minhas finanças →</a>
+    <p class="price-line">Pagamento único de <b>€12,90</b> · Acesso imediato</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">😰 Parece-lhe familiar?</span>
+      <h2>A desorganização custa mais do que pensa</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="ico">🧾</span><h3>Contas espalhadas</h3><p>Faturas no e-mail, extratos no banco, apontamentos no telemóvel. Ninguém sabe ao certo quanto a família gasta por mês.</p></div>
+      <div class="card"><span class="ico">💳</span><h3>Cartão surpresa</h3><p>O extrato chega e vem o susto. Prestações esquecidas viram juros — e o buraco do mês seguinte.</p></div>
+      <div class="card"><span class="ico">🏖️</span><h3>Zero poupança</h3><p>Qualquer imprevisto vira dívida: o carro avaria, um eletrodoméstico parte-se, e lá se vai o descoberto.</p></div>
+      <div class="card"><span class="ico">💬</span><h3>Discussões por dinheiro</h3><p>Sem um número claro, cada gasto vira discussão. O problema raramente é quanto entra — é não saber para onde vai.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">⚙️ Tudo num só sítio</span>
+      <h2>O que a folha de cálculo faz por si</h2>
+    </div>
+    <div class="feat"><div class="ico">💶</div><div><h3>100% em euros, adaptada a Portugal</h3><p>Categorias e exemplos pensados para a realidade portuguesa. Sem adaptações, sem conversões.</p></div></div>
+    <div class="feat"><div class="ico">📊</div><div><h3>Receitas e despesas organizadas</h3><p>Registe tudo em minutos por dia e veja exatamente para onde vai cada euro.</p></div></div>
+    <div class="feat"><div class="ico">💳</div><div><h3>Cartões e dívidas sob controlo</h3><p>Acompanhe faturas, prestações e dívidas com visão clara do que falta pagar.</p></div></div>
+    <div class="feat"><div class="ico">🎯</div><div><h3>Metas de poupança</h3><p>Defina objetivos — férias, fundo de emergência, entrada da casa — e acompanhe o progresso.</p></div></div>
+    <div class="feat"><div class="ico">📈</div><div><h3>Gráficos automáticos</h3><p>Resumos visuais por categoria e por mês, sem fórmulas nem complicações.</p></div></div>
+    <div class="feat"><div class="ico">📱</div><div><h3>Funciona em todo o lado</h3><p>Use no telemóvel, tablet ou computador, com Google Sheets ou Excel.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">🚀 Simples de começar</span>
+      <h2>Em minutos, as suas finanças organizadas</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Receba o acesso</h3><p>Após o pagamento, recebe imediatamente o link da folha de cálculo no seu e-mail.</p></div>
+      <div class="step"><h3>Faça uma cópia sua</h3><p>Com um clique, a folha passa a ser sua — privada, só sua, para usar para sempre.</p></div>
+      <div class="step"><h3>Registe e acompanhe</h3><p>Lance as suas movimentações e veja os gráficos atualizarem-se sozinhos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="offer">
+      <span class="eyebrow">💎 Oferta única</span>
+      <h2 style="margin-bottom:10px">DinDin do Lar — Edição Portugal</h2>
+      <div class="old">€29,90</div>
+      <div class="price">€12,90<small> pagamento único</small></div>
+      <ul>
+        <li>Folha de cálculo completa, adaptada a Portugal</li>
+        <li>Controlo de receitas, despesas, cartões e dívidas</li>
+        <li>Gráficos e resumos automáticos</li>
+        <li>Metas de poupança</li>
+        <li>Acesso vitalício + atualizações gratuitas</li>
+        <li>Funciona no telemóvel, tablet e computador</li>
+      </ul>
+      <a href="https://pay.hotmart.com/T108151603R" class="btn btn-primary" data-cta>Comprar agora — €12,90 →</a>
+      <p class="guarantee">🔒 Pagamento 100% seguro via Hotmart · Acesso imediato após a confirmação</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">❓ Dúvidas frequentes</span>
+      <h2>Perguntas & respostas</h2>
+    </div>
+    <div class="faq-item"><button class="faq-q">Preciso de instalar algum programa? <span>＋</span></button><div class="faq-a"><div>Não. Funciona com Google Sheets (gratuito) ou Excel — no telemóvel, tablet ou computador.</div></div></div>
+    <div class="faq-item"><button class="faq-q">É mesmo adaptada a Portugal? <span>＋</span></button><div class="faq-a"><div>Sim. Esta é a Edição Portugal: valores em euros e categorias pensadas para a realidade portuguesa.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Nunca usei folhas de cálculo. Vou conseguir? <span>＋</span></button><div class="faq-a"><div>Sim. Basta preencher os valores — os cálculos e gráficos são automáticos. Sem fórmulas, sem complicações.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Como recebo o produto? <span>＋</span></button><div class="faq-a"><div>Imediatamente após a confirmação do pagamento, recebe um e-mail da Hotmart com o link de acesso.</div></div></div>
+    <div class="faq-item"><button class="faq-q">O pagamento é único ou mensalidade? <span>＋</span></button><div class="faq-a"><div>Pagamento único de €12,90. Sem mensalidades: paga uma vez e usa para sempre.</div></div></div>
+    <div class="faq-item"><button class="faq-q">E se não gostar? <span>＋</span></button><div class="faq-a"><div>A compra é feita pela Hotmart, com garantia de 7 dias: se não ficar satisfeito, pode pedir o reembolso.</div></div></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Daqui a uma semana, pode estar no controlo — <span style="color:var(--green)">ou no mesmo sítio.</span></h2>
+    <p>€12,90. Pagamento único. As suas finanças organizadas.</p>
+    <a href="https://pay.hotmart.com/T108151603R" class="btn btn-primary" style="font-size:18px" data-cta>Quero a minha folha de cálculo →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 DinDin do Lar — Edição Portugal · Pagamento processado pela Hotmart</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><div class="wrap"><a href="https://pay.hotmart.com/T108151603R" class="btn btn-primary" data-cta>Quero por €12,90 →</a></div></div>
+
+<script>
+// ViewContent quando a oferta entra no ecrã
+(function(){
+  var offer=document.querySelector('.offer'), sent=false;
+  function check(){
+    if(sent||!offer) return;
+    var r=offer.getBoundingClientRect();
+    if(r.top<window.innerHeight&&r.bottom>0){sent=true;if(window.fbq)fbq('track','ViewContent',{content_name:'DinDin do Lar - Edicao Portugal',value:12.90,currency:'EUR'});}
+  }
+  window.addEventListener('scroll',check,{passive:true});check();
+})();
+// InitiateCheckout nos CTAs + preserva UTMs
+(function(){
+  var q=window.location.search;
+  document.querySelectorAll('a[data-cta]').forEach(function(a){
+    if(q&&q.length>1){a.href+=(a.href.indexOf('?')>-1?'&':'?')+q.substring(1);}
+    a.addEventListener('click',function(){if(window.fbq)fbq('track','InitiateCheckout',{value:12.90,currency:'EUR'});});
+  });
+})();
+// FAQ
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.faq-item'),ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+// CTA fixo no mobile
+(function(){
+  var s=document.getElementById('sticky');
+  window.addEventListener('scroll',function(){s.classList.toggle('visible',window.scrollY>600);},{passive:true});
+})();
+</script>
+</body>
+</html>
